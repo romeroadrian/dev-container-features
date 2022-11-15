@@ -25,7 +25,11 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies if missing
 check_packages curl ca-certificates
+if ! type git > /dev/null 2>&1; then
+    check_packages git
+fi
 
+# Install foundry
 echo "Installing Foundry..."
 
 curl -L https://foundry.paradigm.xyz | bash
