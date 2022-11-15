@@ -32,6 +32,5 @@ fi
 # Install foundry
 echo "Installing Foundry..."
 
-curl -L https://foundry.paradigm.xyz | bash
-
-~/.foundry/bin/foundryup
+su -l ${USERNAME} -c "curl -L https://foundry.paradigm.xyz | bash"
+su -l ${USERNAME} -c "~/.foundry/bin/foundryup"
