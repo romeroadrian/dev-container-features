@@ -24,7 +24,7 @@ check_packages() {
 export DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies if missing
-check_packages curl
+check_packages curl ca-certificates
 
 echo "Installing Foundry..."
 
